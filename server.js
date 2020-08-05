@@ -243,9 +243,3 @@ app.get("/reset",function(req,res){
     res.sendFile(__dirname+'/reset.html');
 
 });
-
-//listining port number
-app.listen('2121',()=>
-{
-	console.log('server is running on');
-});
