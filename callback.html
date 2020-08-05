@@ -1,0 +1,44 @@
+<script>
+	/*const news = (callname) =>{
+      setTimeout(function(){
+      	console.log('adarsh');
+      	callname()
+      },2000)
+	}
+    
+    const name = () =>{
+      	console.log('new');
+    }
+    news(name)*/
+
+  const promo =new Promise((resolve,reject) =>{
+  	setTimeout(function(){
+      	let roll=[1,2,3]
+      	resolve(roll)
+      	//reject('some')
+      },2000);
+  })
+
+  const data=(data) => {
+  	return new Promise((resolve,reject) =>{
+       setTimeout((data) => {
+       	let bio={
+       		name:'adarsh',
+       		age:20
+       	}
+      	resolve(`My name is ${bio.name} and my age is ${bio.age}.`)
+      },2000);
+  	})
+  }
+
+  promo.then(roll =>{
+  	console.log(roll[1]);
+  	return data(roll[1])
+  })
+  .then(name =>{
+  	console.log(name);
+  })
+  promo.catch(error =>{
+  	console.log(error);
+  })
+</script>

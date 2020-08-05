@@ -1,0 +1,76 @@
+<html>
+  <head><title>Reset password </title>
+    <link href="vendor/bootstrap/css/bootstrap.mins.css" rel="stylesheet" id="bootstrap-css">
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">s
+    <!------ Include the above in your HEAD tag ---------->
+    <style>
+      .form-gap{
+        padding-top:100px;
+      }
+
+      .field-icon {
+        float: right;
+        margin-left: -45px;
+        margin-top: 5px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .signup_error{
+       color:red;
+       font-weight: 800;
+      }
+
+      .signup_success{
+        color:green;
+        font-weight: 800;
+      }      
+    </style>
+  </head>
+  <body>
+    <div class="form-gap"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="text-center">
+                  <h2 class="text-center">Reset Password</h2>
+                  <p>You can reset your password here.</p><br>
+                  <div class="panel-body">
+                    <form id="register" role="form" autocomplete="off" class="form">
+                      <span id="signup_success"></span>
+                      <div class="form-group">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                          <input id="newpassword" name="newpassword" placeholder="New password" class="form-control"  type="password">
+                          <span toggle="#newpassword" class="fa fa-fw fa-eye field-icon toggles-passwords"></span><h5 id="passwordcheck"></h5>
+                        </div><br>
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                          <input id="password-field" type="password" name="confirmpassword" placeholder="confirm password" class="form-control">
+                          <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span><h5 id="confirmcheck"></h5>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <input id="reset" name="recover-submit" class="btn btn-lg btn-primary btn-block" value="Reset Password" type="submit">
+                      </div>
+                      <input type="hidden" class="hide" name="token" id="token" value=""> 
+                    </form>
+                  </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="vendor/js/app.js"></script>
+    <script src="vendor/js/reset.js"></script>
+  </body>
+</html>
