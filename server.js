@@ -5,6 +5,7 @@ var session = require('express-session')
 const userAPI=require('./api/routes');
 const presAPI=require('./api/prescrip');
 const forgotAPI=require('./api/forgot');
+const PORT = process.env.PORT || 2121;
 
 var app=express();
 
@@ -242,4 +243,8 @@ app.get("/outdoor",function(req,res){
 app.get("/reset",function(req,res){
     res.sendFile(__dirname+'/reset.html');
 
+});
+
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
 });
